@@ -11,10 +11,6 @@ public class Publisher {
     private String name;
     private String address;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @MapsId
-    private Book book;
-
     public Publisher() {
     }
 
@@ -45,14 +41,6 @@ public class Publisher {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
     }
 
     @Override

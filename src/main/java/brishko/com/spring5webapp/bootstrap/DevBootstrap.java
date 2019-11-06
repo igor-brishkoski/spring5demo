@@ -35,7 +35,6 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Book ddd = new Book("Domain Driven Design", "1234", publisher);
         // only need to add the author to the book since the join happens there
         ddd.getAuthors().add(eric);
-        publisher.setBook(ddd);
 
         authorRepository.save(eric);
         publisherRepository.save(publisher);
@@ -45,7 +44,6 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Publisher publisher2 = new Publisher("Publisher 2", "Address 2");
         Book noEJB = new Book("J2EE Dev without EJB", "54321", publisher2);
         noEJB.getAuthors().add(rod);
-        publisher2.setBook(noEJB);
 
         publisherRepository.save(publisher2);
         authorRepository.save(rod);
